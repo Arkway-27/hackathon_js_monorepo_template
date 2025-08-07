@@ -1,8 +1,13 @@
 import dotenv from "dotenv";
 
 export default function loadEnv() {
-    const { NODE_ENV } = process.env;
-    console.log(NODE_ENV);
+    const { NODE_ENV, SEVALLA } = process.env;
+    if (SEVALLA) {
+        console.log(
+            "Deploying to Sevalla, using environment variables from hosting provider",
+        );
+        return;
+    }
 
     if (NODE_ENV === "production") {
         dotenv.config({

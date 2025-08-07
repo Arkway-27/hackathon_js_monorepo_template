@@ -1,0 +1,24 @@
+{
+    "name": "@app",
+    "version": "0.1.0",
+    "description": "",
+    "main": "",
+    "scripts": {
+        "dev": "pnpm --parallel start:dev",
+        "dev:client": "pnpm --filter @app/client start:dev",
+        "dev:server": "pnpm --filter @app/server start:dev",
+        "build:client": "pnpm --filter @app/client build",
+        "start:client": "pnpm --filter @app/client start:prod",
+        "test:server": "pnpm --filter @app/server test",
+        "docker:dev": "docker compose --profile dev up",
+        "docker:dev-web": "docker compose --profile dev up --no-deps dev-client",
+        "docker:dev-server": "docker compose --profile dev up dev-server dev-db",
+        "docker:prod": "docker compose --profile prod up --build",
+        "docker:clean": "docker image prune -f",
+        "format": "prettier --write --ignore-unknown ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.14.0"
+}

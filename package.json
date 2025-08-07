@@ -9,6 +9,7 @@
         "dev:server": "pnpm --filter @app/server start:dev",
         "build:client": "pnpm --filter @app/client build",
         "start:client": "pnpm --filter @app/client start:prod",
+        "start:server": "pnpm --filter @app/server start:prod",
         "test:server": "pnpm --filter @app/server test",
         "docker:dev": "docker compose --profile dev up",
         "docker:dev-web": "docker compose --profile dev up --no-deps dev-client",

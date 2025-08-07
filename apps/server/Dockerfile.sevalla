@@ -21,7 +21,7 @@ COPY --from=dependencies --chown=expressjs:nodejs /app/apps/server ./apps/server
 
 USER expressjs
 
-EXPOSE ${PORT}
+EXPOSE 80
 
 CMD ["node", "./apps/server/src/index.js"]
 
